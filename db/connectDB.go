@@ -11,7 +11,8 @@ var PsqlCN = ConnectDB()
 
 /*ConnectDB this function connect the database with the application*/
 func ConnectDB() *sql.DB {
-	connStr := "postgres://user:password@localhost:5432/database?sslmode=disable"
+	/* replace for your data <user><password><server address>*/
+	connStr := "postgres://<user>:<password>@<server address>:5432/gotest?sslmode=disable"
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
 		log.Fatal(err.Error())

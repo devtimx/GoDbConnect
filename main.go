@@ -2,6 +2,7 @@ package main
 
 import (
 	"GoDbConnect/db"
+	"GoDbConnect/handler"
 	"log"
 )
 
@@ -10,4 +11,5 @@ func main() {
 		log.Fatal("Failed connection with the database")
 		return
 	}
+	handler.Handlers()
 }
